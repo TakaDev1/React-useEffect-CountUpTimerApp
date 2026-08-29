@@ -5,9 +5,14 @@ const HandleCounter = () => {
   const [count, setCount] = useState<number>(0);
 
   useEffect(() => {
-    const id = setInterval(() => setCount((prev) => prev + 1), 1000);
+    // カウント開始処理
+    const timer = setInterval(() => {
+      setCount((prev) => prev + 1);
+    }, 1000);
+
     return () => {
-      clearInterval(id);
+      // クリーンアップ処理
+      clearInterval(timer);
     };
   }, []);
   return (
