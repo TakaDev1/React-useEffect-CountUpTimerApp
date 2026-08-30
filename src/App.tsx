@@ -4,7 +4,10 @@ import HandleCounter from "./component/HandleCounter";
 function App() {
   return (
     <>
-      <HandleCounter />
+      <div className="min-h-screen flex flex-col justify-center items-center">
+        <h1>React-useEffect-CountUpTimerApp</h1>
+        <HandleCounter />
+      </div>
     </>
   );
 }
